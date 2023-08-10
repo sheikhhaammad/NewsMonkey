@@ -1,5 +1,5 @@
 const url = `
-https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=f9ea4c64dc6b4644a7a29a1efe48d3e7`;
+https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=f9ea4c64dc6b4644a7a29a1efe48d3e7`;
 const xhr = new XMLHttpRequest();
 xhr.open("GET", url);
 xhr.onreadystatechange = () => {
@@ -20,13 +20,16 @@ xhr.onreadystatechange = () => {
     //         </div>
     //     `
     // }
+
     let o = "";
     response.articles.forEach((e) => {
+      console.log(e.urlToImage);
       o += `
         <div style="width: 23%; margin: 10px;">
-        <p>${e.title}</p>
-        <img src="${e.urlToImage}?${e.urlToImage}:"aa.JPG" alt="Avatar" style="width:100%">
-        <a href="${e.url}" target="_blank"><button class="btn">Tap to know more</button></a>
+        <img src="${e.urlToImage}?${e.urlToImage}:"aa.JPG"  class="main-image"alt="Avatar" style="width:100%">
+         <h5>${e.title}</h3>
+         <p>${e.content}</p>
+        <a href="${e.url}" target="_blank"><button type="button" class="btn btn-secondary">Tap to know more</button></a>
         </div>
         `;
     });

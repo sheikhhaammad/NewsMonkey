@@ -2,17 +2,37 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background: #FFEFBA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
 
-.card{
+.car{
     display: flex;
     flex-direction:row ;
     flex-wrap: wrap
   }
-.btn{
+.btnn{
     background-color:#0a0a23;
     color: #fff;
     border:none; 
-    border-radius:10px; 
-    min-height:30px; 
-    min-width: 120px;
+    border-radius: 3px;
+    min-height:50px; 
+    min-width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    /* margin: 30px; */
+
+}
+.btnn:hover{
+    background-color: #E0C3FC;
+    color: #0a0a23;
+}
+.main-image {
+    height:14em;
+    width: 24em;
 }
